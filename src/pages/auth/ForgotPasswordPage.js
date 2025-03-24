@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ForgotPassword.module.css';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import { ReactComponent as ForgotEmailImage } from '../../static/images/email_picture.svg';
+import EmailImage from '../../static/images/email_picture.png';
 export function ForgotPasswordPage() {
   return (
     <div className={styles.container}>
@@ -11,7 +11,7 @@ export function ForgotPasswordPage() {
         Enter your email address and we'll send you a link to reset your password
       </div>
       <div className={styles.email_image}>
-        <ForgotEmailImage />
+        <img className={styles.forgot_pass_image} src={EmailImage} alt="email" />
       </div>
       <div className={styles.inputRoot}>
         <input type="text" placeholder="Email address" className={styles.input} />

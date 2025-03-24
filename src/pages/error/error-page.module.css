@@ -5,7 +5,9 @@
 }
 
 .error_image {
-  width: 600px;
+  width: 500px;
   /*position: relative;*/
   padding: 0 12rem;
+  align-self: center;
+  vertical-align: middle;
 }

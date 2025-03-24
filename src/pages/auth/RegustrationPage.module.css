@@ -14,8 +14,11 @@
 }
 
 .registration_image {
-  width: 250px;
   align-self: center;
+}
+
+.register_image {
+  width: 300px;
 }
 
 .inputRoot {

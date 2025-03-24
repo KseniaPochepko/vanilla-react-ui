@@ -2,9 +2,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import styles from './RegustrationPage.module.css';
 import cx from 'classnames';
 import { Link, useNavigate } from 'react-router-dom';
-import { ReactComponent as RegistrationImage } from '../../static/images/register.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../store/redux/auth';
+import RegisterImage from '../../static/images/register.png';
 
 const defaultForm = { firstName: '', lastName: '', email: '', password: '', passwordConfirm: '' };
 
@@ -33,7 +33,7 @@ export function RegistrationPage() {
     <div className={styles.container}>
       <div className={cx('title', 'text-lg', styles.greeting)}>Sign up to start</div>
       <div className={styles.registration_image}>
-        <RegistrationImage />
+        <img className={styles.register_image} src={RegisterImage} alt="registration" />
       </div>
       <div className={styles.inputRoot}>
         <input

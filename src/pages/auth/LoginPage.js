@@ -2,9 +2,10 @@ import React, { useCallback, useState } from 'react';
 import styles from './LoginPage.module.css';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import { ReactComponent as LoginImage } from '../../static/images/rocket.svg';
+import RocketImage from '../../static/images/rocket.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/redux/auth';
+
 export function LoginPage() {
   const [error, user] = useSelector(({ auth }) => [auth.error, auth.user]);
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ export function LoginPage() {
       <div className={cx('title', 'text-lg', styles.greeting)}>Hey there!</div>
       {/*<div className={cx('text', 'text-sm', styles.greeting)}>Sign in to start</div>*/}
       <div className={styles.login_image}>
-        <LoginImage />
+        <img className={styles.rocket_image} src={RocketImage} alt="rocket" />
       </div>
       <div className={styles.formControl}>
         <div className={styles.inputRoot}>
