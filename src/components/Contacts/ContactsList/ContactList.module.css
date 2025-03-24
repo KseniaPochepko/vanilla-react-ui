@@ -1,0 +1,6 @@
+.container {
+  display: flex;
+  flex-wrap: wrap; /*  позволяет перенос дивов на другую строку*/
+  margin: -1rem -0.75rem -.5rem;
+  padding-bottom: 0.5rem;
+}

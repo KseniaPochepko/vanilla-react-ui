@@ -1,0 +1,10 @@
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  color: #344955;
+  padding-bottom: 0.5rem;
+}

@@ -1,0 +1,38 @@
+.text {
+  font-family: Lato, sans, serif;
+}
+
+.text-sm {
+  font-size: 0.625rem;
+  line-height: 14px;
+  color: #1C322D;
+}
+.text-md {
+  font-size: .95rem;
+}
+.text-lg {
+  font-size: 2rem;
+}
+.text-xl {
+  font-size: 3rem;
+}
+
+.title {
+  font-family: Merriweather, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text.error {
+  color: #BD4646FF;
+}
+
+.material-icons {
+  font-size: inherit;
+}

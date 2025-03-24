@@ -1,0 +1,23 @@
+.container {
+  padding: 1.5rem 1.5rem;
+  border-radius: 5px;
+  background-color: #E8EDE8;
+}
+
+.heading{
+  color: #344955;
+  padding-bottom: 0.25rem;
+}
+
+.divider {
+  border-top: 2px solid #F9AA33FF;
+  width: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 390px) {
+  .container {
+    padding: 2rem 2rem;
+    margin: 2rem;
+  }
+}

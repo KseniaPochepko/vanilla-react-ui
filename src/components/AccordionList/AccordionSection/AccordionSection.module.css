@@ -1,0 +1,68 @@
+.section {
+  border-radius: 5px;
+}
+
+@media (hover:hover) {
+  .section.collapsed:hover:not(:active) {
+    background-color: #225D60;
+  }
+}
+
+
+.section_title_container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.section_title_container > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.arrow {
+  width: 25px;
+  height: 25px;
+  border-radius: 13px;
+  background-color: #BBCFDA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 225ms;
+}
+
+.section:not(.collapsed) {
+  background-color: #E8EDE8;
+}
+
+.section:not(.collapsed) .arrow {
+  transform: rotate(90deg);
+}
+
+.title {
+  color: #225D60;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section.collapsed:hover .title {
+  color: whitesmoke;
+}
+
+.section_body {
+  height: auto;
+  overflow: hidden;
+  transition: max-height 225ms cubic-bezier(.7, 0, .3, 1);
+}
+
+.section_content {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.section_text {
+  font-size: 0.875rem;
+  color: #225D60;
+  margin-bottom: 1rem;
+}
+

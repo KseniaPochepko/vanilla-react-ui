@@ -1,0 +1,143 @@
+.wrap {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.container {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1.5rem 0.75rem 0;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  /*flex-direction: row;*/
+  padding: 1rem 1rem .25rem 1rem;
+}
+
+.avatar {
+  background-color: #344955;
+  border-radius: 5px;
+  width: 11.75rem;
+  height: 11.75rem;
+  flex-shrink: 0; /*не дает этому диву схлопнуться в нулевую ширину*/
+  /*align-self: center;*/
+}
+
+.avatar_icon {
+  width: 11.75rem;
+  height: 11.75rem;
+}
+
+.name {
+  /*padding: 0 .5rem;*/
+  min-width: 0; /*без этого скрыть слишком длинную надпись ... не получается*/
+}
+
+.first_name {
+  padding: .5rem 0 .5rem;
+}
+
+.last_name {
+  padding: 0 0 .5rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 0 .5rem .25rem;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  padding: 0 .5rem .5rem;
+}
+
+.email {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 .5rem .5rem;
+}
+
+.dob {
+  display: flex;
+  align-items: center;
+  padding: 0 .5rem .25rem;
+}
+
+.button_row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: .25rem 1rem 1rem;
+}
+
+.edit_button {
+  margin-bottom: .5rem;
+  /*margin-right: .75rem;*/
+}
+
+@media screen and (min-width: 650px) {
+  .wrap {
+    flex-basis: 50%;
+    min-width: 0; /* без этого не работает flex-basis: 25% */
+    flex-grow: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    flex-basis: 50%;
+    min-width: 0;
+  }
+
+  .container {
+    /*margin: 0.375rem 0.75rem 0.375rem 0;*/
+  }
+}
+
+@media screen and (min-width: 835px) {
+  .wrap {
+    flex-basis: 33%;
+    min-width: 0;
+  }
+}
+@media screen and (min-width: 1200px){
+  .wrap {
+    flex-basis: 25%;
+  }
+  .first_name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .button_row {
+    flex-wrap: wrap;
+  }
+  .edit_button {
+    margin-bottom: .5rem;
+  }
+}
+
+/*@media screen and (max-width: 1080px) {*/
+/*  .wrap {*/
+/*    flex-basis: 50%;*/
+/*  }*/
+
+/*  .head {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 1rem 0 .25rem 1rem;*/
+/*  }*/
+/*  !* doesn't work*!*/
+/*  .name {*/
+/*    padding: 0;*/
+/*  }*/
+/*}*/

@@ -1,0 +1,11 @@
+.error_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error_image {
+  width: 600px;
+  /*position: relative;*/
+  padding: 0 12rem;
+}

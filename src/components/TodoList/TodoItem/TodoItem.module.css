@@ -1,0 +1,39 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_text {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  flex: 1;
+}
+
+.item.done .item_text {
+  text-decoration: line-through;
+}
+
+.button_row {
+  display: flex;
+  margin: 0 -1rem;
+  flex: 1;
+}
+
+.button_row > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .button_row {
+    padding: 5px 0 5px;
+    justify-content: right;
+  }
+}

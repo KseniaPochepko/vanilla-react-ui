@@ -1,0 +1,29 @@
+.button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.button.success {
+  background-color: #f9aa33; /* Orange */
+}
+
+.button.success:hover{
+  background-color: #ffba54; /* Orange */
+}
+
+.button.error {
+  /*background-color: #BD4646FF; !* Red *!*/
+  /*background-color: #1C322D;*/
+  background-color: #225D60;
+}
+
+.button.error:hover {
+  /*background-color: #dc5c5c; !* Red *!*/
+  background-color: #BD4646FF; /* Red */
+}

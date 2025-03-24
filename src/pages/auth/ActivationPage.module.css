@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1.5rem 2rem;
+  max-width: 650px;
+  min-width: 360px;
+}
+
+.greeting {
+  padding-bottom: 0.5rem;
+  align-self: center;
+}
+
+.login_image {
+  width: 250px;
+  align-self: center;
+}
+
+.link {
+  display: contents;
+  align-self: center;
+}
+
+.login_button {
+  margin-top: 1.5rem;
+}

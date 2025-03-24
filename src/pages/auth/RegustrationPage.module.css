@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1.5rem 2rem;
+  max-width: 650px;
+  min-width: 360px;
+}
+
+.greeting {
+  padding-bottom: 0.5rem;
+  align-self: center;
+}
+
+.registration_image {
+  width: 250px;
+  align-self: center;
+}
+
+.inputRoot {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.input {
+  flex: 1;
+  background-color: whitesmoke;
+  border: 1px solid rgba(19, 21, 50, .1);
+  border-radius: 44px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.create_button {
+  margin-top: 1.5rem;
+}
+
+.sign_in_container {
+  display: flex;
+  align-self: flex-end;
+  padding: 0.75rem 0 0 0;
+}
+
+.sign_in_question {
+  padding: 0 0.125rem;
+}
+
+.sign_in_button {
+  color: #3f609a;
+  padding: 0 0.125rem;
+}
+
+.sign_in_button:hover {
+  color: #344955;
+}
