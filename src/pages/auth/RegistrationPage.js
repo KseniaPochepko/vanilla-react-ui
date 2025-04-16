@@ -15,7 +15,7 @@ export function RegistrationPage() {
   const [form, setForm] = useState(defaultForm);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(error);
+  // console.log(error);
 
   useEffect(() => {
     if (registered) navigate('/activation');
@@ -67,6 +67,7 @@ export function RegistrationPage() {
           className={styles.input}
         />
       </div>
+      <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.email}</div>
       <div className={styles.inputRoot}>
         <input
           type="password"
