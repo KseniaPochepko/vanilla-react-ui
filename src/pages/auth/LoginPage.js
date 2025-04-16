@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/redux/auth';
 
 export function LoginPage() {
-  const [error, user] = useSelector(({ auth }) => [auth.error, auth.user]);
+  const error = useSelector(({ auth }) => auth.error ?? {});
+
   const dispatch = useDispatch();
-  console.log(error, user);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,7 +29,7 @@ export function LoginPage() {
   return (
     <div className={styles.container}>
       <div className={cx('title', 'text-lg', styles.greeting)}>Hey there!</div>
-      {/*<div className={cx('text', 'text-sm', styles.greeting)}>Sign in to start</div>*/}
+      <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.general}</div>
       <div className={styles.login_image}>
         <img className={styles.rocket_image} src={RocketImage} alt="rocket" />
       </div>
@@ -44,19 +44,23 @@ export function LoginPage() {
             className={styles.input}
           />
         </div>
-        <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error}</div>
+        <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.email}</div>
       </div>
 
-      <div className={styles.inputRoot}>
-        <input
-          value={password}
-          onChange={handlePasswordChanged}
-          name="password"
-          type="password"
-          placeholder="Your password"
-          className={styles.input}
-        />
+      <div className="form-control">
+        <div className={styles.inputRoot}>
+          <input
+            value={password}
+            onChange={handlePasswordChanged}
+            name="password"
+            type="password"
+            placeholder="Your password"
+            className={styles.input}
+          />
+        </div>
+        <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.password}</div>
       </div>
+
       <Link to={'/forgot-password'} className={cx('text', 'text-sm', styles.forgot_password_button)}>
         forgot password?
       </Link>

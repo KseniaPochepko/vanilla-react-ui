@@ -31,7 +31,8 @@ function* loginSaga(action) {
     const user = yield api.auth.me();
     yield put(loginSuccess(user));
   } catch (err) {
-    yield put(loginFailure(err.message));
+    const { path = 'general', message } = err;
+    yield put(loginFailure({ [path]: message }));
   }
 }
 
@@ -40,6 +41,7 @@ function* registerSaga(action) {
     const user = yield api.auth.register(action.payload);
     yield put(registerSuccess(user));
   } catch (err) {
-    yield put(registerFailure(err.message));
+    const { path = 'general', message } = err;
+    yield put(registerFailure({ [path]: message }));
   }
 }

@@ -56,7 +56,7 @@ const {
 
     register: (state) => ({ ...state, error: null, created: null }),
     registerSuccess: (state, action) => ({ ...state, created: action.payload.id }),
-    registerFailure: (state, action) => ({ ...state, error: action.payload }),
+    registerFailure: (state, action) => ({ ...state, error: action.payload ?? null }),
   },
 });
 

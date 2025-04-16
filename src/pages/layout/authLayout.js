@@ -5,7 +5,8 @@ import { useEffect } from 'react';
 import { Loader } from '../../components/common';
 
 export function AuthLayout() {
-  const [user, initialized] = useSelector(({ auth }) => [auth.user, auth.initialized]);
+  const user = useSelector(({ auth }) => auth.user);
+  const initialized = useSelector(({ auth }) => auth.initialized);
   const navigate = useNavigate();
 
   useEffect(() => {

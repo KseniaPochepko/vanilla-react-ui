@@ -10,9 +10,12 @@ const defaultForm = { firstName: '', lastName: '', email: '', password: '', pass
 
 export function RegistrationPage() {
   const [registered] = useSelector(({ auth }) => [auth.created]);
+  // const user = useSelector(({ auth }) => auth.user ?? {});
+  const error = useSelector(({ auth }) => auth.error ?? {});
   const [form, setForm] = useState(defaultForm);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log(error);
 
   useEffect(() => {
     if (registered) navigate('/activation');
@@ -32,6 +35,7 @@ export function RegistrationPage() {
   return (
     <div className={styles.container}>
       <div className={cx('title', 'text-lg', styles.greeting)}>Sign up to start</div>
+      <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.general}</div>
       <div className={styles.registration_image}>
         <img className={styles.register_image} src={RegisterImage} alt="registration" />
       </div>
@@ -44,6 +48,7 @@ export function RegistrationPage() {
           className={styles.input}
         />
       </div>
+      <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.firstName}</div>
       <div className={styles.inputRoot}>
         <input
           type="text"
@@ -71,6 +76,7 @@ export function RegistrationPage() {
           className={styles.input}
         />
       </div>
+      <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.password}</div>
       <div className={styles.inputRoot}>
         <input
           type="password"

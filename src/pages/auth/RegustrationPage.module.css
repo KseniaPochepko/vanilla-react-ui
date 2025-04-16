@@ -23,7 +23,7 @@
 
 .inputRoot {
   display: flex;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
 }
 
 .input {
@@ -33,6 +33,10 @@
   border-radius: 44px;
   height: 30px;
   padding-left: 10px;
+}
+
+.helperText {
+  padding: 0 15px;
 }
 
 .create_button {

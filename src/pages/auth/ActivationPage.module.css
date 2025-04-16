@@ -18,6 +18,10 @@
   align-self: center;
 }
 
+.activation_image {
+  width: inherit;
+}
+
 .link {
   display: contents;
   align-self: center;
