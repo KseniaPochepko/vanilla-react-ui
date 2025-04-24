@@ -3,7 +3,7 @@
 }
 
 .text-sm {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   line-height: 14px;
   color: #1C322D;
 }
@@ -33,6 +33,13 @@
   color: #BD4646FF;
 }
 
+.text.label {
+  color: #1C312D;
+  /*color: #524a3ed1;*/
+  text-transform: capitalize;
+}
+
 .material-icons {
   font-size: inherit;
 }
+

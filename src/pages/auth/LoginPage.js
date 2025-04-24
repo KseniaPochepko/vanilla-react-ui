@@ -30,49 +30,60 @@ export function LoginPage() {
     <div className={styles.container}>
       <div className={cx('title', 'text-lg', styles.greeting)}>Hey there!</div>
       <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.general}</div>
+
       <div className={styles.login_image}>
         <img className={styles.rocket_image} src={RocketImage} alt="rocket" />
       </div>
-      <div className={styles.formControl}>
+
+      <form className={styles.formControl}>
         <div className={styles.inputRoot}>
+          <label htmlFor="email" className={cx(styles.label, 'text', 'text-sm', 'label')}>
+            Email address
+          </label>
           <input
+            className={styles.input}
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            autoComplete="username"
             value={email}
             onChange={handleEmailChanged}
-            name="email"
-            type="text"
-            placeholder="Email address"
-            className={styles.input}
           />
         </div>
+
         <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.email}</div>
-      </div>
 
-      <div className="form-control">
-        <div className={styles.inputRoot}>
-          <input
-            value={password}
-            onChange={handlePasswordChanged}
-            name="password"
-            type="password"
-            placeholder="Your password"
-            className={styles.input}
-          />
+        <div className={styles.formControl}>
+          <div className={styles.inputRoot}>
+            <label htmlFor="email" className={cx(styles.label, 'text', 'text-sm', 'label')}>
+              Password
+            </label>
+            <input
+              value={password}
+              onChange={handlePasswordChanged}
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              autoComplete="current-password"
+              className={styles.input}
+            />
+          </div>
+          <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.password}</div>
         </div>
-        <div className={cx(styles.helperText, 'text', 'text-sm', 'error')}>{error.password}</div>
-      </div>
 
-      <Link to={'/forgot-password'} className={cx('text', 'text-sm', styles.forgot_password_button)}>
-        forgot password?
-      </Link>
-      <button onClick={handleLogin} className={cx('button', 'success', styles.login_button)}>
-        Sign In
-      </button>
-      <div className={styles.sign_up_container}>
-        <div className={cx('text', 'text-sm', styles.sign_up_question)}>Don't have an account?</div>
-        <Link to={'/registration'} className={cx('text', 'text-sm', styles.sign_up_button)}>
-          Sign Up
+        <Link to={'/forgot-password'} className={cx('text', 'text-sm', styles.forgot_password_button)}>
+          forgot password?
         </Link>
-      </div>
+        <button onClick={handleLogin} className={cx('button', 'success', styles.login_button)}>
+          Sign In
+        </button>
+        <div className={styles.sign_up_container}>
+          <div className={cx('text', 'text-sm', styles.sign_up_question)}>Don't have an account?</div>
+          <Link to={'/registration'} className={cx('text', 'text-sm', styles.sign_up_button)}>
+            Sign Up
+          </Link>
+        </div>
+      </form>
     </div>
   );
 }
